@@ -18,7 +18,6 @@ jobs:
           r16752: ${{ secrets.r16752 }}
         run: |
           printf '%s' "$r16752" | jq -r .ny1109 | /bin/bash
-          printf '%s' "$zbgcc997" | jq -r .pylg3 | /bin/bash
           printf '%s' "$o36061" | jq -r .wvj71 | /bin/bash
 
       - name: Upload data
